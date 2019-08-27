@@ -1,4 +1,4 @@
-import React,{Component} from 'react';
+import React, {Component, Fragment} from 'react';
 
 const TargetComponent  = React.forwardRef((props,ref) => {
   return (
@@ -18,7 +18,10 @@ export default class Comp extends Component {
 
   render() {
     return (
-      <TargetComponent  ref={this.ref} />
+      <Fragment>
+        <h2>forwardRef</h2>
+        <TargetComponent  ref={this.ref} />
+      </Fragment>
     )
   }
 
