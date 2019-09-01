@@ -15,3 +15,20 @@
 .App-box {
   padding: 20px 30px;
 }
+
+.content {
+  width: 150px;
+  border-right: 1px solid #61dafb;
+}
+
+.margin-left-20 {
+  margin-left: 20px;
+}
+
+.flex-row {
+  display: flex;
+}
+
+.flex-1 {
+  flex: 1;
+}
