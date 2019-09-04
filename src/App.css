@@ -16,9 +16,10 @@
   padding: 20px 30px;
 }
 
-.content {
+ul.content {
   width: 150px;
   border-right: 1px solid #61dafb;
+  list-style-type: decimal-leading-zero;
 }
 
 .margin-left-20 {

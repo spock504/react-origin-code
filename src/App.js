@@ -13,6 +13,8 @@ function App() {
           <li><Link to="/forwardRef">forwardRef</Link></li>
           <li><Link to="/content">content</Link></li>
           <li><Link to="/suspense">suspense</Link></li>
+          <li><Link to="/hooks">hooks</Link></li>
+          <li><Link to="/children">children</Link></li>
         </ul>
         <div className={`flex-1 margin-left-20`}>
           <RouterComponent  />
