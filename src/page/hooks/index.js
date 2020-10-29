@@ -4,12 +4,12 @@ export default () => {
   // 利用数组解构的方式接收状态名及其设置方法 即 当执行setName方法时就会改变name的值
   const [name, setName] = useState('somebody')
 
-  useEffect(() => {
+  useEffect(() => { // 生命周期方法
     console.log("component update")
     return () => {
       console.log("unbind")
     }
-  },[])
+  },[]) //注意这个[]，表示需要监听的变化内容，为空则都不监听，只在组件渲染的时候执行一次
 
   return (
     <>

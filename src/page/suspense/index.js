@@ -1,28 +1,31 @@
-import React, { Suspense } from 'react'
+import React, { Suspense, lazy } from 'react';
+
+const LazyComp = lazy(() => import('./lazy.js'));
 
 let data = '';
 let promise = '';
 function requestData() {
   if (data) return data;
   if (promise) throw promise;
-  promise = new Promise((resolve => {
-    setTimeout(()=>{
-      data = 'Data resolved'
-      resolve()
-    },2000)
-  }))
-  throw promise
+  promise = new Promise((resolve) => {
+    setTimeout(() => {
+      data = 'Data resolved';
+      resolve();
+    }, 2000);
+  });
+  throw promise;
 }
 
-function SuspenseComp () {
+function SuspenseComp() {
   const data = requestData();
-  return <p>{data}</p>
+  return <p>{data}</p>;
 }
 
 export default () => {
   return (
-    <Suspense fallback="loading data">
+    <Suspense fallback='loading data'>
       <SuspenseComp />
+      <LazyComp />
     </Suspense>
-  )
-}
+  );
+};

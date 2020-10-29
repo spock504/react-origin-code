@@ -22,3 +22,13 @@ The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+## 简要内容：
+
+### lazy
+  文件位置`page/suspense` ：打开控制台，lazy 的文件会在页面显示的时候才进行加载。并且`suspense`包裹的组件，会先显示fallback的内容，直到lazy的文件都加载完毕。
+
+###  hook
+
+  
+  
